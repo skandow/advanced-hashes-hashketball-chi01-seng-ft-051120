@@ -154,7 +154,13 @@ def team_colors(teams_name)
   teams_color
 end 
 
-
+def team_names
+  results = game_hash
+  names = []
+  names << results[:home][:team_name]
+  names << results[:away][:team_name]
+  names
+end 
 
 
 
