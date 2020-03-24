@@ -146,9 +146,9 @@ end
 def team_colors(teams_name)
   results = game_hash
   teams_color = nil 
-  if result[:home][:team_name] = teams_name
+  if results[:home][:team_name] = teams_name
     teams_color = results[:home][:colors]
-  elsif result[:away][:team_name] = teams_name
+  elsif results[:away][:team_name] = teams_name
     teams_color = results[:away][:colors]
   end 
   teams_color
