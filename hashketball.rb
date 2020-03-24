@@ -197,6 +197,29 @@ def player_stats(players_name)
   players_stats.delete(:player_name)
   players_stats
 end 
+
+def big_shoe_rebounds
+  results = game_hash 
+  biggest_shoe = 0
+  biggest_shoe_rebounds = 0 
+  home_players_list = results[:home][:players]
+  away_players_list = results[:away][:players]
+  home_players_list.each do |index|
+    if index[:shoe] > biggest_shoe 
+      biggest_shoe = index[:shoe]
+      biggest_shoe_rebounds = index[:rebounds]
+    end 
+  end 
+  away_players_list.each do |index|
+    if index[:shoe] > biggest_shoe
+      biggest_shoe = index[:shoe]
+      biggest_shoe_rebounds = index[:rebounds]
+    end 
+  end 
+  biggest_shoe_rebounds
+end 
+      
+      
     
 
 
