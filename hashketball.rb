@@ -186,12 +186,12 @@ def player_stats(players_name)
   players_stats = {}
   home_players_list.each do |index|
     if index[:player_name] == players_name
-      players_stats = index
+      players_stats = index.except(:player_name)
     end 
   end 
   away_players_list.each do |index|
     if index[:player_name] == players_name 
-      players_stats = index
+      players_stats = index.except(:player_name)
     end 
   end 
   players_stats
