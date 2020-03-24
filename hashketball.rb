@@ -286,22 +286,23 @@ end
 
 def long_name_steals_a_ton?
     longest_name = player_with_longest_name
-    results = game_hash 
+    results = game_hash
+    verdict = true 
     longest_name_stats = player_stats(longest_name)
     longest_name_rebounds = longest_name_stats[:rebounds]
     home_players_list = results[:home][:players]
     away_players_list = results[:away][:players]
     home_players_list.each do |index|
     if index[:rebounds] > longest_name_rebounds 
-      return false
+      verdict = false
     end 
   end 
   away_players_list.each do |index|
     if index[:rebounds] > longest_name_rebounds 
-      return false
+      verdict = false
     end 
   end 
-  return true  
+  verdict   
 end 
     
       
