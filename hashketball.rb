@@ -107,6 +107,23 @@ def game_hash
   game_results
 end 
 
+def num_points_scored(players_name)
+  results = game_results
+  home_players_list = results[:home][:players]
+  away_players_list = results[:away][:players]
+  home_players_list.each do |index|
+    if index[:player_name] == players_name
+      result = index[:points]
+    end 
+  end 
+  away_players_list.each do |index|
+    if index[:player_name] == players_name 
+      result = index[:points]
+    end 
+  end 
+  result 
+end 
+
 
 
 
