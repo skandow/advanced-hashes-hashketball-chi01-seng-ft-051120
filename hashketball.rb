@@ -111,36 +111,36 @@ def num_points_scored(players_name)
   results = game_hash
   home_players_list = results[:home][:players]
   away_players_list = results[:away][:players]
-  result = nil 
+  points_player = nil 
   home_players_list.each do |index|
     if index[:player_name] == players_name
-      result = index[:points]
+      points_player = index[:points]
     end 
   end 
   away_players_list.each do |index|
     if index[:player_name] == players_name 
-      result = index[:points]
+      points_player = index[:points]
     end 
   end 
-  result 
+  points_player
 end 
 
 def num_points_scored(players_name)
   results = game_hash
   home_players_list = results[:home][:players]
   away_players_list = results[:away][:players]
-  result = nil 
+  shoe_size_player = nil 
   home_players_list.each do |index|
     if index[:player_name] == players_name
-      result = index[:shoe_size]
+      shoe_size_player = index[:shoe_size]
     end 
   end 
   away_players_list.each do |index|
     if index[:player_name] == players_name 
-      result = index[:shoe_size]
+      shoe_size_player = index[:shoe_size]
     end 
   end 
-  result 
+  shoe_size_player 
 end
 
 
