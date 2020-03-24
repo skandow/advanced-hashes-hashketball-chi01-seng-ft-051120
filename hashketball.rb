@@ -179,23 +179,23 @@ def player_numbers(teams_name)
   team_numbers 
 end 
 
-def players_stats(players_name)
+def player_stats(players_name)
   results = game_hash
   home_players_list = results[:home][:players]
   away_players_list = results[:away][:players]
-  player_stats = {}
+  players_stats = {}
   home_players_list.each do |index|
     if index[:player_name] == players_name
-      player_stats = index
+      players_stats = index
     end 
   end 
   away_players_list.each do |index|
     if index[:player_name] == players_name 
-      player_stats = index
+      players_stats = index
     end 
   end 
-  player_stats
-end 
+  players_stats
+lend 
     
 
 
