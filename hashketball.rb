@@ -162,6 +162,24 @@ def team_names
   names
 end 
 
+def player_numbers(teams_name)
+  results = game_hash 
+  team_numbers = []
+  if results[:home][:team_name] == teams_name
+    home_players_list = results[:home][:players]
+    home_players_list.each do |index|
+      team_numbers << index[:number]
+    end 
+    elsif results[:away][:team_name] == teams_name
+      away_players_list = results[:away][:players]
+      away_players_list.each do |index|
+        team_numbers << index[:number]
+      end 
+    end 
+  team_numbers 
+end 
+    
+
 
 
 
