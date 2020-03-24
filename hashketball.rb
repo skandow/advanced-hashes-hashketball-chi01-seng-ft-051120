@@ -149,7 +149,7 @@ def team_colors(teams_name)
   if result[:home][:team_name] = teams_name
     teams_color = results[:home][:colors]
   elsif result[:away][:team_name] = teams_name
-    teams_color = results[l:away][:colors]
+    teams_color = results[:away][:colors]
   end 
   teams_color
 end 
