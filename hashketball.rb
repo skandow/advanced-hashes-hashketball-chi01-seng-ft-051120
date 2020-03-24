@@ -143,6 +143,17 @@ def shoe_size(players_name)
   shoe_size_player 
 end
 
+def team_colors(teams_name)
+  results = game_hash
+  teams_color = nil 
+  if result[:home][:team_name] = teams_name
+    teams_color = result[:home][:colors]
+  elsif result[:away][:team_name] = teams_name
+    teams_color = result[:away][:colors]
+  end 
+  teams_color
+end 
+
 
 
 
