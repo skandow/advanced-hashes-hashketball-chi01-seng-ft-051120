@@ -262,6 +262,27 @@ def winning_team
   end 
   winning_team_name
 end 
+
+def player_with_longest_name
+  results = game_hash 
+  name_length = 0
+  longest_name = "" 
+  home_players_list = results[:home][:players]
+  away_players_list = results[:away][:players]
+  home_players_list.each do |index|
+    if index[:player_name].length > name_length 
+      name_length = index[:player_name].length
+      longest_name = index[:player_name]
+    end 
+  end 
+  away_players_list.each do |index|
+    if index[:player_name].length > name_length 
+      name_length = index[:player_name].length
+      longest_name = index[:player_name]
+    end 
+  end 
+  longest_name 
+end 
       
       
     
