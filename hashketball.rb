@@ -238,6 +238,29 @@ def most_points_scored
     end 
   end 
   biggest_scorer
+end
+
+def winning_team 
+  results = game_hash
+  home_points = 0 
+  away_points = 0 
+  winning_team_name = ""
+  home_players_list = results[:home][:players]
+  away_players_list = results[:away][:players]
+  home_players_list.each do |index|
+    home_points += index[:points]
+  end 
+  away_players_list.each do |index|
+    away_points += index[:points]
+  end 
+  if home_points > away_points 
+    winning_team_name = results[:home][:team_name]
+    elsif away_points > home_points 
+    winning_team_name = results[:away][:team_name]
+  else 
+    winning_team_name = "tie"
+  end 
+  winning_team_name
 end 
       
       
