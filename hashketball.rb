@@ -194,7 +194,7 @@ def player_stats(players_name)
       players_stats = index
     end 
   end 
-  players_stats = players_stats.delete(:player_name)
+  players_stats.delete(:player_name)
   players_stats
 end 
     
