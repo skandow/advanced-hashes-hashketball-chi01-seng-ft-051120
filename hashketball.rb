@@ -195,7 +195,7 @@ def player_stats(players_name)
     end 
   end 
   players_stats = players_stats.delete(:player_name)
-  players_statsl
+  players_stats
 end 
     
 
