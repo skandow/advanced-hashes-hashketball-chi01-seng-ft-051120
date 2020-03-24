@@ -132,12 +132,12 @@ def shoe_size(players_name)
   shoe_size_player = nil 
   home_players_list.each do |index|
     if index[:player_name] == players_name
-      shoe_size_player = index[:shoe_size]
+      shoe_size_player = index[:shoe]
     end 
   end 
   away_players_list.each do |index|
     if index[:player_name] == players_name 
-      shoe_size_player = index[:shoe_size]
+      shoe_size_player = index[:shoe]
     end 
   end 
   shoe_size_player 
